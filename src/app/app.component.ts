@@ -10,4 +10,9 @@ import { HeaderComponent } from './components/header/header.component';
 })
 export class AppComponent {
   title = 'my-project';
+  number: number = 0;
+
+  addOne() {
+    this.number++;
+  }
 }
