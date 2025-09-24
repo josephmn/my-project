@@ -19,6 +19,8 @@ export class AppComponent {
   condition: boolean = false;
   condition2: string = "";
 
+  movies: string[] = ['Star Wars', 'Game of Thron', 'Back to future', 'Angry Birds'];
+
   addOne() {
     this.number++;
   }
