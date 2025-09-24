@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   userName: string = 'Joseph';
   number: number = 0;
+  condition: boolean = false;
+  condition2: string = "";
 
   addOne() {
     this.number++;
