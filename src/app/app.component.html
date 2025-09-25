@@ -1,3 +1,5 @@
-<h1>input signal - Comunicación padre-hijo</h1>
+<h1>&#64;Output | Comunicación hijo-padre</h1>
 
-<app-child [msg]="text" [person]="person"></app-child>
+<h2>Hola {{ name }}</h2>
+
+<app-child (login)="setName($event)"></app-child>

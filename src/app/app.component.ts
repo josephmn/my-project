@@ -13,10 +13,9 @@ import { ChildComponent } from './components/child/child.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  text: string = "Variable desde el padre"
+  name: string = "";
 
-  person: any = {
-    sex: "hombre",
-    age: 30
+  setName(e: string) {
+    this.name = e;
   }
 }
