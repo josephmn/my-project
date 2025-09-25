@@ -1,16 +1,3 @@
-<h1>Bloque &#64;for - Renderizado de listas</h1>
+<h1>&#64;input - Comunicación padre-hijo</h1>
 
-@for (movie of movies; track $index) {
-<p>{{$index + 1}}.- {{ movie }}</p>
-}
-
-<hr>
-<h1>Trabajando con listas de objetos</h1>
-<ul>
-    @for (animal of animals; track animals.id) {
-    <li>
-        <h2>{{ animal.name }}</h2>
-        <img [src]="animal.img" [alt]="animal.name" width="200">
-    </li>
-    }
-</ul>
+<app-child [msg]="text" [person]="person"></app-child>
