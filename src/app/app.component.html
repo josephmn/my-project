@@ -1,5 +1,17 @@
-<h1>ngClass | Clases Dinámicas</h1>
+<h1>Reactive Forms</h1>
 
-<h2 [ngClass]="{dark: isDark, big: true}">Hola a todos!</h2>
-
-<button (click)="toggleDark()">Toogle Dark</button>
+<form [formGroup]="movieForm" (submit)="handleSubmit()">
+    <fieldset>
+        <label for="movie-name">Movie name:</label>
+        <input type="text" id="movie-name" formControlName="nombre">
+    </fieldset>
+    <fieldset>
+        <label for="movie-duration">Movie duration:</label>
+        <input type="text" id="movie-duration" formControlName="duracion">
+    </fieldset>
+    <fieldset>
+        <label for="movie-director">Movie director:</label>
+        <input type="text" id="movie-director" formControlName="director">
+    </fieldset>
+    <button>Create Movie</button>
+</form>

@@ -1,21 +1,34 @@
-import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    FormsModule,
-    NgClass,
+    ReactiveFormsModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  isDark: boolean = true;
+  movieForm: FormGroup;
+  name: FormControl;
+  duration: FormControl;
+  director: FormControl;
 
-  toggleDark() {
-    this.isDark = !this.isDark;
+  constructor() {
+    this.name = new FormControl('');
+    this.duration = new FormControl('');
+    this.director = new FormControl('');
+
+    this.movieForm = new FormGroup({
+      nombre: this.name,
+      duracion: this.duration,
+      director: this.director
+    });
+  }
+
+  handleSubmit() {
+    console.log(this.movieForm.value);
   }
 }
