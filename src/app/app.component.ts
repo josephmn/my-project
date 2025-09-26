@@ -1,39 +1,17 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ChildComponent } from './components/child/child.component';
+import { Child2Component } from './components/child2/child2.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    ReactiveFormsModule
+    ChildComponent,
+    Child2Component
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  movieForm: FormGroup;
-  name: FormControl;
-  duration: FormControl;
-  director: FormControl;
 
-  constructor() {
-    this.name = new FormControl('', Validators.required);
-    this.duration = new FormControl('', [
-      Validators.required,
-      Validators.max(300)
-    ]);
-    this.director = new FormControl('');
-
-    this.movieForm = new FormGroup({
-      nombre: this.name,
-      duracion: this.duration,
-      director: this.director
-    });
-  }
-
-  handleSubmit() {
-    console.log('Movie created: ', this.movieForm.value);
-    console.table(this.movieForm.value);
-    this.movieForm.reset();
-  }
 }

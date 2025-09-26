@@ -1,25 +1,5 @@
-<h1>Reactive Forms</h1>
+<h1>Services | Instancias Globales - Singlenton</h1>
 
-<form [formGroup]="movieForm" (submit)="handleSubmit()">
-    <fieldset>
-        <label for="movie-name">Movie name:</label>
-        <input type="text" id="movie-name" formControlName="nombre">
-        @if (name.invalid && name.touched) {
-            <p class="form-error">Name is required</p>
-        }
-    </fieldset>
-    <fieldset>
-        <label for="movie-duration">Movie duration:</label>
-        <input type="number" id="movie-duration" formControlName="duracion">
-        @if (duration.hasError("required") && duration.touched) {
-            <p class="form-error">Duration is required</p>
-        } @else if (duration.hasError("max") && duration.touched) {
-            <p class="form-error">Movie cannot be longer than 300 minutes</p>
-        }
-    </fieldset>
-    <fieldset>
-        <label for="movie-director">Movie director:</label>
-        <input type="text" id="movie-director" formControlName="director">
-    </fieldset>
-    <button [disabled]="movieForm.invalid">Create Movie</button>
-</form>
+<app-child></app-child>
+
+<app-child2></app-child2>
