@@ -1,4 +1,10 @@
-<p>header works!</p>
-<p>Hola {{ userName }}</p>
-
-<input type="text" [value]="userName">
+<header class="header">
+    <h1>Movie Page | RouterLink</h1>
+    <nav>
+        <ul class="nav-list">
+            <li><a class="link" routerLink="/" >Home</a></li>
+            <li><a class="link" routerLink="/movies" >Movies</a></li>
+            <li><a class="link" routerLink="/create" >Form</a></li>
+        </ul>
+    </nav>
+</header>
