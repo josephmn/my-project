@@ -1,4 +1,5 @@
-<h1>Models | Interfaces</h1>
+<h1>ngClass | Clases Dinámicas</h1>
 
-<h2>Hola {{ userName }}</h2>
+<h2 [ngClass]="{dark: isDark, big: true}">Hola a todos!</h2>
 
+<button (click)="toggleDark()">Toogle Dark</button>
