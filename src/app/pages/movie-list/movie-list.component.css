@@ -5,7 +5,7 @@ h1 {
 .movie-list {
     margin: 30px;
 
-    .movie-item {
+    .movie-container {
         padding-left: 20px;
         background-color: beige;
         border-bottom: 2px solid black;
@@ -17,7 +17,7 @@ h1 {
         border-radius: 10px;
     }
 
-    .movie-item:hover {
+    .movie-container:hover {
         background-color: bisque;
     }
 }
